@@ -286,6 +286,8 @@ body {
 .code-snippet {
     font-family: var(--font-mono);
     font-size: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .code-header {
@@ -322,6 +324,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    white-space: pre;
 }
 
 .code-line {
@@ -739,19 +742,24 @@ section {
 .footer {
     background: var(--bg-primary);
     border-top: 1px solid var(--glass-border);
-    padding: 40px 0;
+    padding: 40px 20px; /* added horizontal padding for mobile */
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    gap: 20px; /* spacing when wrapped */
     color: var(--text-secondary);
+    text-align: center;
 }
 
 .footer-links {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap; /* prevent links from overflowing */
+    justify-content: center;
 }
 
 .footer-links a {
@@ -767,7 +775,7 @@ section {
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 80px; /* increased so it won’t overlap footer */
     right: 30px;
     width: 50px;
     height: 50px;
@@ -792,6 +800,17 @@ section {
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
 }
 
+/* ✅ Mobile Fix */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; /* stack content */
+        gap: 15px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
 /* Animations */
 .fade-in {
     opacity: 0;
