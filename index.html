@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishank Gupta - Backend Engineer & Full-Stack Developer</title>
+    <meta name="description"
+        content="Rishank Gupta - 2nd Year B.Tech Student, Aspiring Backend Engineer specializing in Java, Spring Boot, and Full-Stack Development. Passionate about DSA and AI.">
+    <meta name="keywords"
+        content="Rishank Gupta, Backend Engineer, Java Developer, Spring Boot, Full-Stack Developer, DSA, Portfolio">
+    <meta name="author" content="Rishank Gupta">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rishank Gupta - Backend Engineer Portfolio">
+    <meta property="og:description"
+        content="Passionate Backend Engineer and Full-Stack Developer with expertise in Java, Spring Boot, and modern web technologies.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("TeTkBfazej3pN5vTwY"); // yaha apna public key daalo
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RG</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm Rishank Gupta</span>
+                    </h1>
+                    <p class="hero-subtitle">3rd-Year B.Tech Student | Aspiring Backend Engineer</p>
+                    <p class="hero-description">
+                        Passionate about solving problems using technology. Currently mastering Data Structures &
+                        Algorithms
+                        in Java while building full-stack applications with Spring Boot and modern web technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Rishankgupta08" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" class="social-link">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="code-title">Backend.java</span>
+                            </div>
+                            <div class="code-content">
+                                <span class="code-line"><span class="keyword">public class</span> <span
+                                        class="class-name">Developer</span> {</span>
+                                <span class="code-line"> <span class="keyword">private</span> String name = <span
+                                        class="string">"Rishank"</span>;</span>
+                                <span class="code-line"> <span class="keyword">private</span> String[] skills = {</span>
+                                <span class="code-line"> <span class="string">"Java"</span>,</span>
+                                <span class="code-line"> <span class="string">"Spring Boot"</span>,</span>
+                                <span class="code-line"> <span class="string">"JavaScript"</span>,</span>
+                                <span class="code-line"> <span class="string">"Firebase"</span></span>
+                                <span class="code-line"> };</span>
+                                <span class="code-line">}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I am a passionate 3rd-year B.Tech student with a strong drive for solving complex problems
+                        through technology. My journey in computer science has led me to specialize in backend
+                        development, with a particular focus on Java and Spring Boot.
+                    </p>
+                    <p class="about-description">
+                        Currently, I'm dedicating significant time to mastering Data Structures & Algorithms,
+                        which forms the foundation of efficient problem-solving in software development.
+                        I actively practice on platforms like LeetCode and HackerRank to sharpen my coding skills.
+                    </p>
+                    <p class="about-description">
+                        My technical interests span across AI, Cloud Computing, and full-stack development.
+                        I enjoy participating in hackathons and building real-world applications that solve
+                        meaningful problems. My goal is to grow into a skilled backend engineer who can
+                        architect scalable and robust systems.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">DSA Problems Solved</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Rishank.jpg" alt="Rishank Gupta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend & Database</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>LeetCode</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="slider-container">
+                <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Previous project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="slider-viewport" id="sliderViewport">
+
+                    <!-- Slide 1: Monastery360 -->
+
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/monastery360.png" alt="Monastery360 Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://monastery360-haritage.vercel.app/" class="project-link"
+                                        target="_blank" title="Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge">Live</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Monastery360</h3>
+                            <p class="project-description">
+                                A heritage tourism web platform providing 360° virtual exploration of monasteries.
+                                Features immersive visuals, cultural information, and a modern responsive UI
+                                deployed live on Vercel.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Vercel</span>
+                                <span class="tech-tag">360° View</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: TypeVerse -->
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/typeverse.png" alt="TypeVerse Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Rishankgupta08/TypeVerse" class="project-link"
+                                        target="_blank" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TypeVerse</h3>
+                            <p class="project-description">
+                                Specialized typing practice platform designed for government exam aspirants.
+                                Features exam-specific content, real-time WPM tracking, accuracy evaluation,
+                                and performance analytics with Firebase integration.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Real-time</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Weather Forecasting -->
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/weather.png" alt="3D Weather Dashboard Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Rishankgupta08/Weather-Forecasting-"
+                                        class="project-link" target="_blank" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">3D Weather Dashboard</h3>
+                            <p class="project-description">
+                                A beautiful, responsive weather dashboard with 3D visual effects,
+                                live weather data fetched from public APIs, dynamic theme switching,
+                                and animated weather condition displays.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5/CSS3</span>
+                                <span class="tech-tag">Weather API</span>
+                                <span class="tech-tag">3D Effects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Task Tracker -->
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/tasktracker.png" alt="Task Tracker Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Rishankgupta08/Task-Tracker" class="project-link"
+                                        target="_blank" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Tracker</h3>
+                            <p class="project-description">
+                                Full-stack task management app with real-time Cloud Firestore integration.
+                                Add, complete, and delete tasks with instant sync. Built with Spring Boot
+                                REST API backend and a responsive vanilla JS frontend.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Firebase Firestore</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Airport Management System -->
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/airport.png" alt="Airport Management System Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Rishankgupta08/AirportManagementSystem"
+                                        class="project-link" target="_blank" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Airport Management System</h3>
+                            <p class="project-description">
+                                Full-stack web app for flight search, seat booking (economy/business),
+                                and user authentication with modal login/register. Features a MySQL-backed
+                                Java Servlets backend deployed on Apache Tomcat.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java Servlets</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Tomcat</span>
+                                <span class="tech-tag">Maven</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Student Performance Analyzer -->
+                    <div class="project-card slide">
+                        <div class="project-image">
+                            <img src="img/student.png" alt="Student Performance Analyzer Preview" class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Rishankgupta08/Student-Performance-Analyzer"
+                                        class="project-link" target="_blank" title="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Student Performance Analyzer</h3>
+                            <p class="project-description">
+                                Data analytics project exploring factors affecting student academic performance.
+                                Analyzes GPA trends, study hours, attendance, and activities through rich
+                                interactive visualizations using Python, Pandas, and Plotly.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Plotly</span>
+                                <span class="tech-tag">Jupyter</span>
+                            </div>
+                        </div>
+
+                    </div><!-- end slider-viewport -->
+
+                    <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Next project">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div><!-- end slider-container -->
+
+                <!-- Dot Indicators -->
+                <div class="slider-dots" id="sliderDots">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                    <button class="dot" data-index="3"></button>
+                    <button class="dot" data-index="4"></button>
+                    <button class="dot" data-index="5"></button>
+                </div>
+
+                <!-- Slide Counter -->
+                <div class="slider-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always open to discussing new opportunities, interesting projects,
+                        or just having a chat about technology and development.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>Available via contact form</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <span>Quick Response Time</span>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Rishankgupta08" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" class="social-link">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Rishank Gupta.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
