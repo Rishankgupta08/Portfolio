@@ -134,7 +134,7 @@ window.addEventListener('load', () => {
 });
 
 // Contact Form Handling
-contactForm.addEventListener('submit', async (e) => {
+contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const submitBtn = contactForm.querySelector('button[type="submit"]');
