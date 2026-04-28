@@ -2,564 +2,1091 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishank Gupta - Backend Engineer & Full-Stack Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── SEO ─── -->
+    <title>Rishank Gupta — Full Stack Developer & Competitive Programmer</title>
     <meta name="description"
-        content="Rishank Gupta - 2nd Year B.Tech Student, Aspiring Backend Engineer specializing in Java, Spring Boot, and Full-Stack Development. Passionate about DSA and AI.">
+        content="Portfolio of Rishank Gupta — Full Stack Developer, DSA enthusiast, and competitive programmer. Building scalable web apps and elegant UIs." />
     <meta name="keywords"
-        content="Rishank Gupta, Backend Engineer, Java Developer, Spring Boot, Full-Stack Developer, DSA, Portfolio">
-    <meta name="author" content="Rishank Gupta">
+        content="Rishank Gupta, Full Stack Developer, React, Node.js, Competitive Programming, Portfolio" />
+    <meta name="author" content="Rishank Gupta" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rishankgupta.dev/" />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Rishank Gupta - Backend Engineer Portfolio">
+    <!-- ─── Open Graph ─── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rishankgupta.dev/" />
+    <meta property="og:title" content="Rishank Gupta — Full Stack Developer" />
     <meta property="og:description"
-        content="Passionate Backend Engineer and Full-Stack Developer with expertise in Java, Spring Boot, and modern web technologies.">
-    <meta property="og:type" content="website">
+        content="Full Stack Developer & competitive programmer building impactful experiences." />
+    <meta property="og:image" content="https://rishankgupta.dev/og-image.jpg" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <!-- ─── Twitter Card ─── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rishank Gupta — Full Stack Developer" />
+    <meta name="twitter:description" content="Building impactful digital experiences." />
 
-    <!-- Google Fonts -->
+    <!-- ─── PWA ─── -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#08090E" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+    <!-- ─── Favicon (unicode SVG) ─── -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
+
+    <!-- ─── Google Fonts ─── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet" />
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ─── EmailJS ─── -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#00d4ff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- ─── Styles ─── -->
+    <link rel="stylesheet" href="styles.css" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("TeTkBfazej3pN5vTwY"); // yaha apna public key daalo
-        })();
-    </script>
+    <!-- ─── JSON-LD Structured Data ─── -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rishank Gupta",
+    "url": "https://rishankgupta.dev",
+    "jobTitle": "Full Stack Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "NIT Kurukshetra"
+    },
+    "sameAs": [
+      "https://github.com/Rishankgupta08",
+      "https://linkedin.com/in/rishank-gupta-a54486323",
+      "https://leetcode.com/u/rishankgupta567/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">RG</span>
+
+    <!-- ─── Scroll Progress ─── -->
+    <div id="scrollProgress" role="progressbar" aria-label="Page scroll progress"></div>
+
+    <!-- ─── Custom Cursor ─── -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- ─── Copy Toast ─── -->
+    <div class="copy-toast" id="copyToast" role="status" aria-live="polite">Email copied! ✓</div>
+
+    <!-- ════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════ -->
+    <header>
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+
+                <a href="#hero" class="nav-logo" aria-label="Rishank Gupta — Home">
+                    RG<span class="accent-period">.</span>
+                </a>
+
+                <ul class="nav-links" role="list">
+                    <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+                    <li><a href="#stack" class="nav-link" id="nav-stack">Stack</a></li>
+                    <li><a href="#works" class="nav-link" id="nav-works">Works</a></li>
+                    <li><a href="#cp" class="nav-link" id="nav-cp">PS</a></li>
+                    <li><a href="#process" class="nav-link" id="nav-process">Process</a></li>
+                </ul>
+
+                <a id="openContactModal" style="cursor: pointer;" class="btn-pill btn-orange nav-cta"
+                    aria-label="Open contact form">
+                    Let's Talk
+                </a>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation"
+        aria-hidden="true">
+        <ul class="mobile-menu-links" role="list">
+            <li><a href="#about" class="mobile-nav-link" tabindex="-1">About</a></li>
+            <li><a href="#stack" class="mobile-nav-link" tabindex="-1">Stack</a></li>
+            <li><a href="#works" class="mobile-nav-link" tabindex="-1">Works</a></li>
+            <li><a href="#cp" class="mobile-nav-link" tabindex="-1">PS</a></li>
+            <li><a href="#process" class="mobile-nav-link" tabindex="-1">Process</a></li>
+            <li><a id="openContactModal" class="mobile-nav-link" style="cursor: pointer;" tabindex="-1">Let's Talk</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+    <section class="hero-section" id="hero" aria-labelledby="heroHeading">
+
+        <!-- BG -->
+        <div class="hero-bg" id="heroBg" aria-hidden="true">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-grain"></div>
+        </div>
+
+        <!-- 3D Shape Canvas -->
+        <div class="hero-shape-container" aria-hidden="true">
+            <div class="hero-shape">
+                <canvas id="shapeCanvas" width="420" height="520" aria-hidden="true"></canvas>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm Rishank Gupta</span>
-                    </h1>
-                    <p class="hero-subtitle">3rd-Year B.Tech Student | Aspiring Backend Engineer</p>
-                    <p class="hero-description">
-                        Passionate about solving problems using technology. Currently mastering Data Structures &
-                        Algorithms
-                        in Java while building full-stack applications with Spring Boot and modern web technologies.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Rishankgupta08" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" class="social-link">
-                            <i class="fas fa-code"></i>
-                        </a>
-                    </div>
+        <!-- Content -->
+        <div class="hero-content">
+            <div class="hero-left">
+
+                <div class="hero-prelabel">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    AVAILABLE FOR INTERNSHIPS &amp; COLLABORATION
                 </div>
-                <div class="hero-visual">
-                    <div class="floating-card">
-                        <div class="code-snippet">
-                            <div class="code-header">
-                                <div class="code-dots">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <span class="code-title">Backend.java</span>
-                            </div>
-                            <div class="code-content">
-                                <span class="code-line"><span class="keyword">public class</span> <span
-                                        class="class-name">Developer</span> {</span>
-                                <span class="code-line"> <span class="keyword">private</span> String name = <span
-                                        class="string">"Rishank"</span>;</span>
-                                <span class="code-line"> <span class="keyword">private</span> String[] skills = {</span>
-                                <span class="code-line"> <span class="string">"Java"</span>,</span>
-                                <span class="code-line"> <span class="string">"Spring Boot"</span>,</span>
-                                <span class="code-line"> <span class="string">"JavaScript"</span>,</span>
-                                <span class="code-line"> <span class="string">"Firebase"</span></span>
-                                <span class="code-line"> };</span>
-                                <span class="code-line">}</span>
-                            </div>
+
+                <h1 class="hero-headline" id="heroHeading">
+                    <span class="hero-line-1">Hey, I'm</span>
+                    <span class="hero-name" id="heroName">Rishank Gupta</span>
+                    <span class="hero-line-3">— I build things<span class="accent-period">.</span></span>
+                </h1>
+
+                <p class="hero-desc">
+                    Full Stack Developer &amp; DSA enthusiast crafting web apps,
+                    clean APIs, and competitive programming.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#works" class="btn-pill btn-orange btn-lg" id="viewWorkBtn">
+                        View My Work ↓
+                    </a>
+                    <a href="/Resume.pdf" class="btn-pill btn-outline btn-lg" id="resumeBtn" target="_blank"
+                        rel="noopener noreferrer" aria-label="View resume PDF">
+                        Resume ↗
+                    </a>
+                </div>
+
+                <div class="hero-chips" role="list" aria-label="Quick stats">
+                    <span class="stat-chip" role="listitem">⚡ 1000+ DSA problems</span>
+                    <span class="stat-chip" role="listitem">🏆 1700+ LeetCode Rating</span>
+                    <span class="stat-chip" role="listitem">🎓 Galgotias University</span>
+                    <span class="stat-chip" role="listitem">🔭 Open to opportunities</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll indicator — bottom RIGHT -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span class="scroll-arrow">↓</span>
+            <span class="scroll-label">SCROLL</span>
+        </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════
+     ABOUT
+════════════════════════════════════ -->
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="container">
+
+            <div class="about-grid">
+
+                <!-- Photo Column -->
+                <div class="about-photo-col fade-up">
+
+                    <div class="about-photo-wrapper" id="aboutPhotoWrapper">
+                        <div class="photo-corner-accent" aria-hidden="true"></div>
+                        <img class="about-photo" src="Rishank.jpg"
+                            alt="Rishank Gupta — Full Stack Developer & Computer Science student at NIT Kurukshetra"
+                            loading="lazy" />
+                    </div>
+
+                    <div class="about-identity-chips" role="list" aria-label="Identity traits">
+                        <span class="identity-chip" role="listitem">🔥 Problem Solver</span>
+                        <span class="identity-chip" role="listitem">⚡ Fast Learner</span>
+                        <span class="identity-chip" role="listitem">🎯 Detail Oriented</span>
+                        <span class="identity-chip" role="listitem">🚀 Builder</span>
+                    </div>
+
+                </div>
+
+                <!-- Info Column -->
+                <div class="about-info-col fade-up">
+
+                    <div class="about-heading-block">
+                        <h2 class="about-heading-muted" id="about-title">The</h2>
+                        <span class="about-heading-bold">Developer<span class="accent-period">.</span></span>
+                    </div>
+
+                    <p class="about-tagline">
+                        Code <span class="tilde">~</span> Algorithms <span class="tilde">~</span> Building stuff that
+                        matters.
+                    </p>
+
+                    <p class="about-bio">
+                        I'm <strong>Rishank Gupta</strong>, a B.Tech student in Computer Science at
+                        <strong>Galgotias University</strong> (2023–2027). I live at the intersection of software
+                        engineering and competitive programming — solving complex algorithmic problems by day
+                        and building full-stack applications by night.
+                        <br><br>
+                        My journey started with Java for DSA and competitive programming, which gave me a
+                        strong foundation in problem-solving. This naturally evolved into Backend development
+                        with Java and Spring Boot — where I bring the same analytical rigor to
+                        system design and code quality.
+                    </p>
+
+                    <div class="about-stats-grid">
+                        <div class="about-stat">
+                            <span class="about-stat-num">1000<span class="accent-period">+</span></span>
+                            <span class="about-stat-label">Problems Solved</span>
+                            <div class="about-stat-line"></div>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-num">2</span>
+                            <span class="about-stat-label">Major Projects</span>
+                            <div class="about-stat-line"></div>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-num">2</span>
+                            <span class="about-stat-label">Hackathons</span>
+                            <div class="about-stat-line"></div>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-num">5<span class="accent-period">+</span></span>
+                            <span class="about-stat-label">Technologies Mastered</span>
+                            <div class="about-stat-line"></div>
                         </div>
                     </div>
+
+                    <!-- Education Card -->
+                    <div class="edu-card">
+                        <span class="edu-label">Education</span>
+                        <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+                        <div class="edu-university">Galgotias University</div>
+                        <div class="edu-details">2023 – 2027 · CGPA: 8.5+</div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        I am a passionate 3rd-year B.Tech student with a strong drive for solving complex problems
-                        through technology. My journey in computer science has led me to specialize in backend
-                        development, with a particular focus on Java and Spring Boot.
-                    </p>
-                    <p class="about-description">
-                        Currently, I'm dedicating significant time to mastering Data Structures & Algorithms,
-                        which forms the foundation of efficient problem-solving in software development.
-                        I actively practice on platforms like LeetCode and HackerRank to sharpen my coding skills.
-                    </p>
-                    <p class="about-description">
-                        My technical interests span across AI, Cloud Computing, and full-stack development.
-                        I enjoy participating in hackathons and building real-world applications that solve
-                        meaningful problems. My goal is to grow into a skilled backend engineer who can
-                        architect scalable and robust systems.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">DSA Problems Solved</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Projects Built</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Years Learning</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="Rishank.jpg" alt="Rishank Gupta">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+
+
+
+    <!-- ════════════════════════════════════
+     TECH STACK
+════════════════════════════════════ -->
+    <section class="section stack-section" id="stack" aria-labelledby="stack-title">
         <div class="container">
+
+            <!-- Section Header -->
             <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Technologies I work with</p>
+                <div class="section-title-block">
+                    <h2 class="section-title-muted">My</h2>
+                    <span class="section-title-bold" id="stack-title">
+                        Stack<span class="accent-period">.</span>
+                    </span>
+                </div>
+                <div class="section-label-right">
+                    <span class="meta-label">TECHNOLOGIES</span>
+                    <div class="header-line" aria-hidden="true"></div>
+                </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
+
+            <!-- Subtext -->
+            <p class="section-subtext fade-up">
+                The tools I reach for when building production-grade
+                applications — from algorithms to APIs.
+            </p>
+
+        </div>
+
+        <!-- ROW 1: Scrolls Left — Languages & Frameworks -->
+        <div class="tech-marquee-container" style="margin-top: 48px;">
+            <div class="tech-marquee tech-marquee-left" aria-hidden="true">
+                <div class="tech-marquee-track">
+
+                    <!-- GROUP 1 (original) -->
+                    <div class="tech-chip-group">
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                                alt="" />
                             <span>Java</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/python/3776AB" alt="" />
                             <span>Python</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/spring/6DB33F" alt="" />
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" />
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/html5/E34F26" alt="" />
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/css/264DE4" alt="" />
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" />
                             <span>JavaScript</span>
                         </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Backend Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-leaf"></i>
+
+                    <!-- GROUP 2 (duplicate for seamless loop) -->
+                    <div class="tech-chip-group">
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                                alt="" />
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/python/3776AB" alt="" />
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/spring/6DB33F" alt="" />
                             <span>Spring Boot</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>REST APIs</span>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" />
+                            <span>PostgreSQL</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Frontend & Database</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/html5/E34F26" alt="" />
                             <span>HTML5</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/css/264DE4" alt="" />
                             <span>CSS3</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-fire"></i>
-                            <span>Firebase</span>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" />
+                            <span>JavaScript</span>
                         </div>
                     </div>
+
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
+            </div>
+        </div>
+
+        <!-- ROW 2: Scrolls Right — Tools, DevOps & Collaboration -->
+        <div class="tech-marquee-container" style="margin: 14px 0;">
+            <div class="tech-marquee tech-marquee-right" aria-hidden="true">
+                <div class="tech-marquee-track">
+
+                    <!-- GROUP 1 (original) -->
+                    <div class="tech-chip-group">
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" />
+                            <span>Tailwind CSS</span>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>LeetCode</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cloud"></i>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/docker/2496ED" alt="" />
                             <span>Docker</span>
                         </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/git/F05032" alt="" />
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/vercel/ffffff" alt="" />
+                            <span>Vercel</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/grafana/F46800" alt="" />
+                            <span>Grafana</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/prometheus/E6522C" alt="" />
+                            <span>Prometheus</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/mysql/4479A1" alt="" />
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/jira/0052CC" alt="" />
+                            <span>Jira</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg"
+                                alt="" />
+                            <span>Slack</span>
+                        </div>
+                    </div>
+
+                    <!-- GROUP 2 (duplicate for seamless loop) -->
+                    <div class="tech-chip-group">
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" />
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/docker/2496ED" alt="" />
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/git/F05032" alt="" />
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/vercel/ffffff" alt="" />
+                            <span>Vercel</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/grafana/F46800" alt="" />
+                            <span>Grafana</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/prometheus/E6522C" alt="" />
+                            <span>Prometheus</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/mysql/4479A1" alt="" />
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon" src="https://cdn.simpleicons.org/jira/0052CC" alt="" />
+                            <span>Jira</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img class="tech-chip-icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg"
+                                alt="" />
+                            <span>Slack</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════
+     SELECTED WORKS — Two-Panel Application Interface
+════════════════════════════════════ -->
+    <section class="section works-section" id="works" aria-labelledby="works-title">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="section-header works-section-header">
+                <div class="section-title-block">
+                    <h2 class="section-title-muted">Selected</h2>
+                    <span class="section-title-bold" id="works-title">Works<span class="accent-period">.</span></span>
+                </div>
+                <div class="section-label-right">
+                    <span class="meta-label">006 / PROJECTS</span>
+                    <div class="header-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="sw-filters" role="tablist" aria-label="Filter projects by category">
+                <button class="sw-filter active" data-filter="all" role="tab" aria-selected="true"
+                    id="filter-all">All</button>
+                <button class="sw-filter" data-filter="ai" role="tab" aria-selected="false" id="filter-ai">AI</button>
+                <button class="sw-filter" data-filter="live" role="tab" aria-selected="false"
+                    id="filter-live">Live</button>
+                <button class="sw-filter" data-filter="backend" role="tab" aria-selected="false"
+                    id="filter-backend">Backend</button>
+                <button class="sw-filter" data-filter="fullstack" role="tab" aria-selected="false"
+                    id="filter-fullstack">Full-Stack</button>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="sw-panel fade-up" id="swPanel">
+                <!-- Auto-advance timer bar -->
+                <div class="sw-timer-bar" id="swTimerBar" aria-hidden="true"></div>
+
+                <!-- LEFT: Navigation Sidebar -->
+                <nav class="sw-nav" aria-label="Project navigation">
+                    <!-- Nav Header -->
+                    <div class="sw-nav-header">
+                        <div class="sw-nav-label">SELECTED WORKS</div>
+                        <div class="sw-nav-ghost">006</div>
+                    </div>
+
+                    <!-- Project List -->
+                    <ul class="sw-nav-list" id="swNavList" role="list">
+                        <!-- Items generated by JS -->
+                    </ul>
+
+                    <!-- Nav Footer -->
+                    <div class="sw-nav-footer">
+                        <div class="sw-footer-row1">
+                            <span class="sw-counter" id="swCounter">01 / 06</span>
+                            <span class="sw-auto-label" id="swAutoLabel">auto ▶</span>
+                        </div>
+                        <div class="sw-progress-track">
+                            <div class="sw-progress-fill" id="swProgressFill"></div>
+                        </div>
+                        <div class="sw-kb-hint" id="swKbHint">[ ↑ ↓ ] to navigate</div>
+                    </div>
+                </nav>
+
+                <!-- RIGHT: Preview Panel -->
+                <div class="sw-preview" id="swPreview" aria-live="polite">
+                    <!-- Content injected by JS -->
+                </div>
+
+                <!-- "Currently Building" chip (MOAE only) -->
+                <div class="sw-building-chip" id="swBuildingChip" aria-hidden="true">
+                    <span class="sw-building-dot"></span>
+                    <span>Active development</span>
+                </div>
+            </div>
+
+            <!-- Tooltip (global, positioned by JS) -->
+            <div class="sw-tooltip" id="swTooltip" aria-hidden="true">
+                <div class="sw-tooltip-preview" id="swTooltipPreview"></div>
+                <div class="sw-tooltip-info">
+                    <div class="sw-tooltip-name" id="swTooltipName"></div>
+                    <div class="sw-tooltip-meta" id="swTooltipMeta"></div>
+                </div>
+            </div>
+
+            <!-- Lightbox Gallery -->
+            <div id="lbOverlay" role="dialog" aria-modal="true" aria-label="Screenshot gallery" aria-hidden="true">
+                <div class="lb-panel">
+                    <div class="lb-header">
+                        <span class="lb-project-name" id="lbProjectName"></span>
+                        <span class="lb-counter" id="lbCounter">01 / 01</span>
+                        <button class="lb-close" id="lbClose" aria-label="Close gallery">✕</button>
+                    </div>
+                    <div class="lb-viewport" id="lbViewport">
+                        <div class="lb-track" id="lbTrack"></div>
+                    </div>
+                    <div class="lb-nav">
+                        <button class="lb-arrow" id="lbPrev" aria-label="Previous screenshot">←</button>
+                        <div class="lb-dots" id="lbDots"></div>
+                        <button class="lb-arrow" id="lbNext" aria-label="Next screenshot">→</button>
                     </div>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ════════════════════════════════════
+     COMPETITIVE PROGRAMMING
+════════════════════════════════════ -->
+    <section class="section cp-section" id="cp" aria-labelledby="cp-title">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="section-title-block">
+                    <h2 class="section-title-muted">Problem</h2>
+                    <span class="section-title-bold" id="cp-title">Solving<span class="accent-period">.</span></span>
+                </div>
+                <div class="section-label-right">
+                    <span class="meta-label">DSA & PROBLEM SOLVING</span>
+                    <div class="header-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="cp-grid fade-up">
+
+                <!-- Stats -->
+                <div class="cp-stats-grid">
+                    <div class="cp-stat-block">
+                        <span class="cp-stat-num">1000<span class="accent-period">+</span></span>
+                        <span class="cp-stat-label">DSA Problems Solved</span>
+                        <div class="cp-stat-underline"></div>
+                    </div>
+                    <div class="cp-stat-block">
+                        <span class="cp-stat-num">1750<span class="accent-period">+</span></span>
+                        <span class="cp-stat-label">LeetCode Rating</span>
+                        <div class="cp-stat-underline"></div>
+                    </div>
+                    <div class="cp-stat-block">
+                        <span class="cp-stat-num">1600<span class="accent-period">+</span></span>
+                        <span class="cp-stat-label">CodeChef Rating</span>
+                        <div class="cp-stat-underline"></div>
+                    </div>
+                    <div class="cp-stat-block">
+                        <span class="cp-stat-num">36<span class="accent-period">+</span></span>
+                        <span class="cp-stat-label">Contests Participated</span>
+                        <div class="cp-stat-underline"></div>
+                    </div>
+                </div>
+
+                <!-- Platform Cards -->
+                <div class="cp-platform-grid">
+
+                    <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" rel="noopener noreferrer"
+                        class="platform-card">
+                        <div class="platform-card-inner">
+                            <img class="platform-icon" src="https://cdn.simpleicons.org/leetcode" alt="LeetCode" />
+                            <div>
+                                <div class="platform-name">LeetCode</div>
+                                <div class="platform-handle">@rishankgupta567</div>
+                                <div class="platform-desc">700+ solved</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://codeforces.com/profile/rishankgupta" target="_blank" rel="noopener noreferrer"
+                        class="platform-card">
+                        <div class="platform-card-inner">
+                            <img class="platform-icon" src="https://cdn.simpleicons.org/codeforces" alt="Codeforces" />
+                            <div>
+                                <div class="platform-name">Codeforces</div>
+                                <div class="platform-handle">@rishankgupta</div>
+                                <div class="platform-desc">900+ rating </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.codechef.com/users/rishankgupta" target="_blank" rel="noopener noreferrer"
+                        class="platform-card">
+                        <div class="platform-card-inner">
+                            <img class="platform-icon" src="https://cdn.simpleicons.org/codechef" alt="CodeChef" />
+                            <div>
+                                <div class="platform-name">CodeChef</div>
+                                <div class="platform-handle">@rishankgupta</div>
+                                <div class="platform-desc">1600+ rating · 3★</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Rishankgupta08" target="_blank" rel="noopener noreferrer"
+                        class="platform-card">
+                        <div class="platform-card-inner">
+                            <img class="platform-icon" src="https://cdn.simpleicons.org/github" alt="GitHub" />
+                            <div>
+                                <div class="platform-name">GitHub</div>
+                                <div class="platform-handle">@Rishankgupta08</div>
+                                <div class="platform-desc">Open source contributions</div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Algorithm Chips -->
+            <div class="algo-chips-section fade-up">
+                <p class="algo-label">Core areas of focus:</p>
+                <div class="algo-chips" role="list">
+                    <span class="algo-chip" role="listitem">Dynamic Programming</span>
+                    <span class="algo-chip" role="listitem">Graph Theory</span>
+                    <span class="algo-chip" role="listitem">Binary Search</span>
+                    <span class="algo-chip" role="listitem">Segment Trees</span>
+                    <span class="algo-chip" role="listitem">Two Pointers</span>
+                    <span class="algo-chip" role="listitem">Greedy Algorithms</span>
+                    <span class="algo-chip" role="listitem">Bit Manipulation</span>
+                    <span class="algo-chip" role="listitem">Trie</span>
+                    <span class="algo-chip" role="listitem">Backtracking</span>
+                    <span class="algo-chip" role="listitem">Union Find</span>
+                    <span class="algo-chip" role="listitem">Memoization</span>
+                    <span class="algo-chip" role="listitem">Sliding Window</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+     PROCESS
+════════════════════════════════════ -->
+    <section class="section process-section" id="process" aria-labelledby="process-title">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="section-title-block">
+                    <h2 class="section-title-muted">How I</h2>
+                    <span class="section-title-bold" id="process-title">Work<span class="accent-period">.</span></span>
+                </div>
+                <div class="section-label-right">
+                    <span class="meta-label">DEVELOPMENT PHILOSOPHY</span>
+                    <div class="header-line" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div class="process-steps">
+
+                <!-- Step 1 -->
+                <div class="step-divider fade-up"></div>
+                <div class="process-step fade-up">
+                    <div class="step-content-col">
+                        <div class="step-number-bg" aria-hidden="true">01</div>
+                        <div class="step-content">
+                            <span class="step-label">UNDERSTAND</span>
+                            <h3 class="step-title">Problem-First Thinking</h3>
+                            <p class="step-desc">
+                                Before writing a single line of code, I deeply analyze requirements,
+                                data structures, and edge cases. Strong foundations in DSA allow me to
+                                design optimal solutions from the start.
+                            </p>
+                            <ul class="step-bullets">
+                                <li><span class="bullet-dash">—</span> Break down complex problems into sub-problems
+                                </li>
+                                <li><span class="bullet-dash">—</span> Identify time &amp; space complexity tradeoffs
+                                </li>
+                                <li><span class="bullet-dash">—</span> Choose appropriate data structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="step-img-card" style="--step-rotation: -2deg;">
+                            <div class="step-img-content">
+                                <div class="step-diagram">
+                                    <div class="diag-title">ALGORITHM ANALYSIS</div>
+                                    <div class="diag-items">
+                                        <div class="diag-item">Input: Complex Requirements</div>
+                                        <div class="diag-item">→ Decompose into sub-problems</div>
+                                        <div class="diag-item">→ Select optimal data structure</div>
+                                        <div class="diag-item">→ Analyze: Optimised solution</div>
+                                        <div class="diag-item"
+                                            style="border-color: rgba(123,110,246,0.3); color: var(--color-accent-violet);">
+                                            ✓ Optimal complexity found</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-divider fade-up"></div>
+                <div class="process-step process-step-reverse fade-up">
+                    <div class="step-content-col">
+                        <div class="step-number-bg" aria-hidden="true">02</div>
+                        <div class="step-content">
+                            <span class="step-label">ARCHITECT</span>
+                            <h3 class="step-title">System Design</h3>
+                            <p class="step-desc">
+                                I design clean, maintainable architectures with clear separation of concerns.
+                                RESTful APIs, component-driven frontends, and efficient database schemas form
+                                the backbone of every project.
+                            </p>
+                            <ul class="step-bullets">
+                                <li><span class="bullet-dash">—</span> RESTful API design with proper status codes</li>
+                                <li><span class="bullet-dash">—</span> Component-driven React architecture</li>
+                                <li><span class="bullet-dash">—</span> Database normalization &amp; indexing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="step-img-card" style="--step-rotation: 2deg;">
+                            <div class="step-img-content">
+                                <div class="step-diagram">
+                                    <div class="diag-title">SYSTEM ARCHITECTURE</div>
+                                    <div class="arch-boxes">
+                                        <div class="arch-box">React UI</div>
+                                        <div class="arch-arrow">→</div>
+                                        <div class="arch-box">Express API</div>
+                                        <div class="arch-arrow">→</div>
+                                        <div class="arch-box">MongoDB</div>
+                                    </div>
+                                    <div class="arch-boxes" style="margin-top: 16px;">
+                                        <div class="arch-box">Auth (JWT)</div>
+                                        <div class="arch-arrow">+</div>
+                                        <div class="arch-box">Socket.IO</div>
+                                        <div class="arch-arrow">+</div>
+                                        <div class="arch-box">Redis Cache</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-divider fade-up"></div>
+                <div class="process-step fade-up">
+                    <div class="step-content-col">
+                        <div class="step-number-bg" aria-hidden="true">03</div>
+                        <div class="step-content">
+                            <span class="step-label">BUILD</span>
+                            <h3 class="step-title">Clean Code &amp; Best Practices</h3>
+                            <p class="step-desc">
+                                Writing readable, maintainable code is as important as making it work.
+                                I follow clean code principles, write meaningful comments, and structure
+                                projects for long-term maintainability.
+                            </p>
+                            <ul class="step-bullets">
+                                <li><span class="bullet-dash">—</span> Modular, reusable components</li>
+                                <li><span class="bullet-dash">—</span> Consistent naming &amp; code style</li>
+                                <li><span class="bullet-dash">—</span> Proper error handling &amp; logging</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="step-img-card" style="--step-rotation: -1.5deg;">
+                            <div class="step-img-content" style="padding: 24px;">
+                                <pre class="code-snippet">
+<span class="code-comment">// Clean, typed, documented</span>
+<span class="code-blue">interface</span> <span class="code-green">TaskPayload</span> {
+  id: <span class="code-orange">string</span>;
+  title: <span class="code-orange">string</span>;
+  status: <span class="code-green">TaskStatus</span>;
+}
+
+<span class="code-blue">async function</span> <span class="code-green">createTask</span>(
+  payload: <span class="code-green">TaskPayload</span>
+): <span class="code-green">Promise</span>&lt;<span class="code-green">Task</span>&gt; {
+  <span class="code-blue">return await</span> db.task.create(payload);
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-divider fade-up"></div>
+                <div class="process-step process-step-reverse fade-up">
+                    <div class="step-content-col">
+                        <div class="step-number-bg" aria-hidden="true">04</div>
+                        <div class="step-content">
+                            <span class="step-label">DELIVER</span>
+                            <h3 class="step-title">Ship &amp; Iterate</h3>
+                            <p class="step-desc">
+                                Shipping working software quickly, then iterating based on feedback.
+                                Every project uses version control, clear commit history, and is deployed
+                                to production with proper documentation.
+                            </p>
+                            <ul class="step-bullets">
+                                <li><span class="bullet-dash">—</span> Git branching &amp; clean commit history</li>
+                                <li><span class="bullet-dash">—</span> Deployment pipelines (Vercel, Render, Railway)
+                                </li>
+                                <li><span class="bullet-dash">—</span> Comprehensive README &amp; docs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="step-img-card" style="--step-rotation: 1.5deg;">
+                            <div class="step-img-content">
+                                <div class="step-diagram">
+                                    <div class="diag-title">DEPLOYMENT PIPELINE</div>
+                                    <div class="deploy-pipe">
+                                        <div class="pipe-item">git push</div>
+                                        <div class="pipe-arrow">→</div>
+                                        <div class="pipe-item">CI check</div>
+                                        <div class="pipe-arrow">→</div>
+                                        <div class="pipe-item">Build</div>
+                                        <div class="pipe-arrow">→</div>
+                                        <div class="pipe-item"
+                                            style="border-color: rgba(123,110,246,0.3); color: var(--color-accent-violet);">
+                                            🚀 Live</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-divider fade-up"></div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- ════════════════════════════════════
+     CONTACT CTA
+════════════════════════════════════ -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+
+        <div class="contact-ghost-bg" aria-hidden="true">SOMETHING</div>
+
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
-            </div>
-
-            <!-- Slider Wrapper -->
-            <div class="slider-container">
-                <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Previous project">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <div class="slider-viewport" id="sliderViewport">
-
-                    <!-- Slide 1: Monastery360 -->
-
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/monastery360.png" alt="Monastery360 Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://monastery360-haritage.vercel.app/" class="project-link"
-                                        target="_blank" title="Live Demo">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <span class="project-badge">Live</span>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Monastery360</h3>
-                            <p class="project-description">
-                                A heritage tourism web platform providing 360° virtual exploration of monasteries.
-                                Features immersive visuals, cultural information, and a modern responsive UI
-                                deployed live on Vercel.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2: TypeVerse -->
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/typeverse.png" alt="TypeVerse Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://typeversee.vercel.app/" class="project-link" target="_blank"
-                                        title="Live Demo">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <span class="project-badge">Live</span>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">TypeVerse</h3>
-                            <p class="project-description">
-                                Specialized typing practice platform designed for government exam aspirants.
-                                Features exam-specific content, real-time WPM tracking, accuracy evaluation,
-                                and performance analytics with Firebase integration.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML/CSS</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Real-time</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Weather Forecasting -->
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/weather.png" alt="3D Weather Dashboard Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Rishankgupta08/Weather-Forecasting-"
-                                        class="project-link" target="_blank" title="GitHub">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">3D Weather Dashboard</h3>
-                            <p class="project-description">
-                                A beautiful, responsive weather dashboard with 3D visual effects,
-                                live weather data fetched from public APIs, dynamic theme switching,
-                                and animated weather condition displays.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML5/CSS3</span>
-                                <span class="tech-tag">Weather API</span>
-                                <span class="tech-tag">3D Effects</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4: Task Tracker -->
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/tasktracker.png" alt="Task Tracker Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Rishankgupta08/Task-Tracker" class="project-link"
-                                        target="_blank" title="GitHub">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Task Tracker</h3>
-                            <p class="project-description">
-                                Full-stack task management app with real-time Cloud Firestore integration.
-                                Add, complete, and delete tasks with instant sync. Built with Spring Boot
-                                REST API backend and a responsive vanilla JS frontend.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Firebase Firestore</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">REST API</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5: Airport Management System -->
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/airport.png" alt="Airport Management System Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Rishankgupta08/AirportManagementSystem"
-                                        class="project-link" target="_blank" title="GitHub">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Airport Management System</h3>
-                            <p class="project-description">
-                                Full-stack web app for flight search, seat booking (economy/business),
-                                and user authentication with modal login/register. Features a MySQL-backed
-                                Java Servlets backend deployed on Apache Tomcat.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java Servlets</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Tomcat</span>
-                                <span class="tech-tag">Maven</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 6: Student Performance Analyzer -->
-                    <div class="project-card slide">
-                        <div class="project-image">
-                            <img src="img/student.png" alt="Student Performance Analyzer Preview" class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Rishankgupta08/Student-Performance-Analyzer"
-                                        class="project-link" target="_blank" title="GitHub">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Student Performance Analyzer</h3>
-                            <p class="project-description">
-                                Data analytics project exploring factors affecting student academic performance.
-                                Analyzes GPA trends, study hours, attendance, and activities through rich
-                                interactive visualizations using Python, Pandas, and Plotly.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Plotly</span>
-                                <span class="tech-tag">Jupyter</span>
-                            </div>
-                        </div>
-
-                    </div><!-- end slider-viewport -->
-
-                    <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Next project">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div><!-- end slider-container -->
-
-                <!-- Dot Indicators -->
-                <div class="slider-dots" id="sliderDots">
-                    <button class="dot active" data-index="0"></button>
-                    <button class="dot" data-index="1"></button>
-                    <button class="dot" data-index="2"></button>
-                    <button class="dot" data-index="3"></button>
-                    <button class="dot" data-index="4"></button>
-                    <button class="dot" data-index="5"></button>
-                </div>
-
-                <!-- Slide Counter -->
-                <div class="slider-counter">
-                    <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
-                </div>
-
-            </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Ready to bring your ideas to life</p>
-            </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>
-                        I'm always open to discussing new opportunities, interesting projects,
-                        or just having a chat about technology and development.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>Available via contact form</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>India</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-clock"></i>
-                            <span>Quick Response Time</span>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Rishankgupta08" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" class="social-link">
-                            <i class="fas fa-code"></i>
-                        </a>
-                    </div>
+
+                <p class="section-prelabel">GET IN TOUCH</p>
+
+                <div class="contact-headline" id="contact-title">
+                    <div class="contact-headline-muted">Let's Build</div>
+                    <div class="contact-headline-bold">Something<span class="accent-period">.</span></div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
+
+                <p class="contact-desc">
+                    Open to internships, full-time roles, and freelance collaborations.
+                    If you have an interesting problem — reach out.
+                </p>
+
+                <!-- Contact Methods -->
+                <div class="contact-chips" role="list">
+                    <button class="contact-chip" id="copyEmailBtn" role="listitem" aria-label="Copy email address">
+                        <span class="contact-chip-icon" aria-hidden="true">✉</span>
+                        rishankgupta567@gmail.com
                     </button>
-                </form>
+                    <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" rel="noopener noreferrer"
+                        class="contact-chip" role="listitem">
+                        <img class="contact-chip-icon-img"
+                            src="https://img.icons8.com/?size=100&id=85141&format=png&color=9CA3AF" alt="LinkedIn"
+                            style="filter: none;" />
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Rishankgupta08" target="_blank" rel="noopener noreferrer"
+                        class="contact-chip" role="listitem">
+                        <img class="contact-chip-icon-img" src="https://cdn.simpleicons.org/github" alt="" />
+                        GitHub
+                    </a>
+                    <a href="https://www.instagram.com/rishank_gupta08?igsh=aGhpYjlyNHE1M3Nw" target="_blank"
+                        rel="noopener noreferrer" class="contact-chip" role="listitem">
+                        <img class="contact-chip-icon-img" src="https://cdn.simpleicons.org/instagram" alt="" />
+                        Instagram
+                    </a>
+                </div>
+
+                <!-- Availability note -->
+                <div class="availability-banner" role="status">
+                    ⚡ Currently available · Looking for Summer 2025 internships
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="contact-ctas">
+                    <a id="openContactModal" style="cursor: pointer;" class="btn-pill btn-orange btn-lg"
+                        aria-label="Send a message">
+                        Send a Message
+                    </a>
+                    <a href="https://github.com/Rishankgupta08" target="_blank" rel="noopener noreferrer"
+                        class="btn-pill btn-outline btn-lg">
+                        See GitHub →
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ════════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Rishank Gupta.</p>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="nav-logo">RG<span class="accent-period">.</span></span>
+                    <span class="footer-role">Full Stack Developer · Galgotias University</span>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#works" class="footer-nav-link">Works</a>
+                    <a href="#process" class="footer-nav-link">Process</a>
+                    <a href="#stack" class="footer-nav-link">Stack</a>
+                    <a href="#about" class="footer-nav-link">About</a>
+                </nav>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Rishankgupta08" target="_blank" rel="noopener noreferrer"
+                        class="footer-social-link" aria-label="GitHub">
+                        <img src="https://cdn.simpleicons.org/github" alt="GitHub" width="20" height="20"
+                            loading="lazy" />
+                    </a>
+                    <a href="https://linkedin.com/in/rishank-gupta-a54486323" target="_blank" rel="noopener noreferrer"
+                        class="footer-social-link" aria-label="LinkedIn">
+                        <img src="https://img.icons8.com/?size=100&id=85141&format=png&color=9CA3AF" alt="LinkedIn"
+                            width="20" height="20" style="filter: none;" loading="lazy" />
+                    </a>
+                    <a href="https://leetcode.com/u/rishankgupta567/" target="_blank" rel="noopener noreferrer"
+                        class="footer-social-link" aria-label="LeetCode">
+                        <img src="https://cdn.simpleicons.org/leetcode" alt="LeetCode" width="20" height="20"
+                            loading="lazy" />
+                    </a>
+                    <a href="https://www.instagram.com/rishank_gupta08?igsh=aGhpYjlyNHE1M3Nw" target="_blank"
+                        rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                        <img src="https://cdn.simpleicons.org/instagram" alt="Instagram" width="20" height="20"
+                            loading="lazy" />
+                    </a>
+                    <a href="https://codeforces.com/profile/rishankgupta" target="_blank" rel="noopener noreferrer"
+                        class="footer-social-link" aria-label="Codeforces">
+                        <img src="https://cdn.simpleicons.org/codeforces" alt="Codeforces" width="20" height="20"
+                            loading="lazy" />
+                    </a>
                 </div>
             </div>
+
+            <div class="footer-divider" aria-hidden="true"></div>
+
+            <div class="footer-bottom">
+                <span>© 2025 Rishank Gupta.</span>
+                <span>Designed &amp; Developed by Rishank<span class="accent-period">.</span></span>
+            </div>
+
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <!-- ════════════════════════════════════
+     CONTACT MODAL
+════════════════════════════════════ -->
+    <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+        aria-hidden="true">
+        <div class="modal-content">
 
-    <!-- JavaScript -->
+            <button class="modal-close" id="modalClose" aria-label="Close contact form">✕</button>
+
+            <h2 class="modal-title" id="modalTitle">Say Hello<span class="accent-period"> 👋</span></h2>
+            <p class="modal-desc">I typically respond within 24 hours.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label class="form-label" for="cf-name">Your Name</label>
+                        <input class="form-input" type="text" id="cf-name" name="from_name" placeholder="Jane Smith"
+                            required autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cf-email">Email Address</label>
+                        <input class="form-input" type="email" id="cf-email" name="from_email"
+                            placeholder="jane@example.com" required autocomplete="email" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="cf-subject">Subject</label>
+                    <input class="form-input" type="text" id="cf-subject" name="subject"
+                        placeholder="Internship / Collaboration / Just saying hi" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="cf-message">Message</label>
+                    <textarea class="form-input form-textarea" id="cf-message" name="message"
+                        placeholder="Tell me about the project or opportunity..." required rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-pill btn-orange form-submit" id="formSubmitBtn">
+                    Send Message ✦
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ─── Scripts ─── -->
     <script src="script.js"></script>
+
 </body>
 
 </html>

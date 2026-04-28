@@ -4,8 +4,8 @@
     "description": "Personal portfolio of Rishank Gupta - Backend Engineer and Full-Stack Developer",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#0a0a0a",
-    "theme_color": "#00d4ff",
+    "background_color": "#08090E",
+    "theme_color": "#FF6B35",
     "orientation": "portrait-primary",
     "icons": [
         {
@@ -19,6 +19,6 @@
             "type": "image/svg+xml"
         }
     ],
-    "categories": ["portfolio", "developer", "technology"],
+    "categories": ["portfolio", "developer", "technology", "productivity"],
     "lang": "en"
 }

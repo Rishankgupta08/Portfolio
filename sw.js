@@ -1,12 +1,13 @@
 // Service Worker for PWA capabilities and caching
-const CACHE_NAME = 'rishank-portfolio-v1';
+const CACHE_NAME = 'rishank-portfolio-v8';
 const urlsToCache = [
     '/',
     '/index.html',
     '/styles.css',
     '/script.js',
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+    '/manifest.json',
+    '/Rishank.jpg',
+    'https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap'
 ];
 
 // Install event
