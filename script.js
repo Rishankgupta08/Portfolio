@@ -324,27 +324,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ════════════════════════════════════
      13. EMAILJS FORM SUBMIT
-  ════════════════════════════════════ */
+════════════════════════════════════ */
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Simple inline validation
       const name = document.getElementById('cf-name');
       const email = document.getElementById('cf-email');
+      const subject = document.getElementById('cf-subject'); // include if you have this field
       const message = document.getElementById('cf-message');
       let valid = true;
 
+      // Clear previous error states
       [name, email, message].forEach(field => {
-        field.style.borderColor = '';
-        if (!field.value.trim()) {
+        if (field) field.style.borderColor = '';
+      });
+
+      // Required field check
+      [name, email, message].forEach(field => {
+        if (field && !field.value.trim()) {
           field.style.borderColor = '#EF4444';
           valid = false;
         }
       });
 
+      // Email format check
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+      if (email && email.value.trim() && !emailRegex.test(email.value.trim())) {
         email.style.borderColor = '#EF4444';
         valid = false;
       }
@@ -356,24 +362,18 @@ document.addEventListener('DOMContentLoaded', () => {
       formSubmitBtn.disabled = true;
 
       try {
-        if (typeof emailjs !== 'undefined') {
-          await emailjs.sendForm(
-            'service_qazi1g2',
-            'template_p2z8qyg',
-            contactForm,
-            'TeTkBfazej3pN5vTwY'
-          );
-        } else {
-          // Simulate for demo
-          await new Promise(r => setTimeout(r, 1000));
-        }
+        await emailjs.sendForm(
+          'service_qazi1g2',
+          'template_p2z8qyg',
+          contactForm,
+          'TeTkBfazej3pN5vTw'    // ← FIXED: removed the extra "Y"
+        );
 
         formSubmitBtn.textContent = 'Message Sent ✓';
         formSubmitBtn.style.background = '#15803D';
         contactForm.reset();
 
         setTimeout(() => {
-          closeModal();
           formSubmitBtn.textContent = originalText;
           formSubmitBtn.style.background = '';
           formSubmitBtn.disabled = false;
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         formSubmitBtn.textContent = 'Error — Try Again';
         formSubmitBtn.style.background = '#991B1B';
-        console.error('[EmailJS]', err);
+        console.error('[EmailJS] Error:', err);
 
         setTimeout(() => {
           formSubmitBtn.textContent = originalText;
@@ -392,7 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
   /* ════════════════════════════════════
      14. COPY EMAIL TO CLIPBOARD
   ════════════════════════════════════ */
